@@ -7,7 +7,7 @@ namespace Proje_OPP_C__Katmanlı_Mimari_.ProjeContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-62HEUCO\\SQLEXPRESS;database=DbNewOopCore;integrated security=true;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-62HEUCO\\SQLEXPRESS;database=DbNewOopCore;integrated security=true;TrustServerCertificate=True;");
         }
 
         public DbSet<Product> Products { get; set; }
