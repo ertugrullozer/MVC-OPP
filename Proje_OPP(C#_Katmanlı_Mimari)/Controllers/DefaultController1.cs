@@ -100,19 +100,23 @@ namespace Proje_OPP_C__Katmanlı_Mimari_.Controllers
             sehirler.SehirAd = "İstanbul";
             sehirler.Nufus = 1600000;
             sehirler.Ulke = "Türkiye";
+            sehirler.Renk1 = "Mavi";
             ViewBag.v1 = sehirler.SehirId;
             ViewBag.v2 = sehirler.SehirAd;
             ViewBag.v3 = sehirler.Nufus;
-            ViewBag.v4 = sehirler.Ulke;
+            ViewBag.z4 = sehirler.Ulke;
+            ViewBag.v5 = sehirler.Renk1;
 
             sehirler.SehirId = 2;
             sehirler.SehirAd = "Üsküp";
             sehirler.Nufus = 1600000;
             sehirler.Ulke = "Makedonya";
+            sehirler.Renk1 = "Sarı";
             ViewBag.z1 = sehirler.SehirId;
             ViewBag.z2 = sehirler.SehirAd;
             ViewBag.z3 = sehirler.Nufus;
             ViewBag.z4 = sehirler.Ulke;
+            ViewBag.z5 = sehirler.Renk1;
             return View();
         }
 

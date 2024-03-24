@@ -1,6 +1,6 @@
 ﻿namespace Proje_OPP_C__Katmanlı_Mimari_.Ornekler
 {
-    public class Sehirler
+    public class Sehirler:Bayrak
     {
         public int SehirId { get; set; }
         public string SehirAd { get; set; }
