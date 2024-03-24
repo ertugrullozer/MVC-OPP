@@ -12,6 +12,7 @@
         <th>Ürün Adı</th>
         <th>Fiyat</th>
         <th>Stock</th>
+        <th>Sil</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -20,6 +21,7 @@
             <td>@item.Name</td>
             <td>@item.Price</td>
             <td>@item.Stock</td>
+            <td><a class="btn btn-danger" href="/Product/DeleteProduct/@item.Id">Sil</a></td>
         </tr>
     }
 
