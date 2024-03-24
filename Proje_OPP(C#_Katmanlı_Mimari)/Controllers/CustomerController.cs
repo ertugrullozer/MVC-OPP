@@ -29,6 +29,7 @@ namespace Proje_OPP_C__Katmanlı_Mimari_.Controllers
         {
             var delete = context.Customers.Where(x=>x.CustomerId == id).FirstOrDefault();
             context.Remove(delete);
+            context.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
@@ -40,9 +41,9 @@ namespace Proje_OPP_C__Katmanlı_Mimari_.Controllers
         [HttpPost]
         public IActionResult UpdateCustomer(Customer p)
         {
-            var value = context.Customers.Where(x=>x.CustomerId==p.CustomerId).FirstOrDefault();
-            value.CustomerName= p.CustomerName;
+            var value = context.Customers.Where(x=>x.CustomerId==p.CustomerId).FirstOrDefault();   
             value.City= p.City;
+            value.CustomerName= p.CustomerName;
             context.SaveChanges();
             return RedirectToAction("Index");
         }
