@@ -21,9 +21,18 @@ namespace Proje_OPP_C__Katmanlı_Mimari_.Controllers
         [HttpPost] 
         public IActionResult AddCustomer(Customer p) 
         {
-            context.Add(p);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            if (p.CustomerName.Length>=6 && p.City != "" && p.City.Length >= 3)
+            {
+                context.Add(p);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.message = "Hatalı Kullanım"; 
+                return View();
+            }
+           
         }
         public IActionResult DeleteCustomer(int id) 
         {
