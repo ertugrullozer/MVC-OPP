@@ -28,5 +28,7 @@ namespace Proje_OPP_C__Katmanlı_Mimari_.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }

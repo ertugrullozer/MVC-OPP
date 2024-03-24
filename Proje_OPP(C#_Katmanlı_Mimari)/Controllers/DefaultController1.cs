@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.SqlServer.Migrations.Internal;
 using Proje_OPP_C__Katmanlı_Mimari_.Ornekler;
 
 namespace Proje_OPP_C__Katmanlı_Mimari_.Controllers
@@ -89,9 +90,29 @@ namespace Proje_OPP_C__Katmanlı_Mimari_.Controllers
             ViewBag.t=topla();
             ViewBag.c=cevre();
             ViewBag.F=Faktöriyel();
-           
-      
-           
+
+            return View();
+        }
+        public IActionResult Deneme() 
+        { 
+            Sehirler sehirler = new Sehirler();
+            sehirler.SehirId = 1;
+            sehirler.SehirAd = "İstanbul";
+            sehirler.Nufus = 1600000;
+            sehirler.Ulke = "Türkiye";
+            ViewBag.v1 = sehirler.SehirId;
+            ViewBag.v2 = sehirler.SehirAd;
+            ViewBag.v3 = sehirler.Nufus;
+            ViewBag.v4 = sehirler.Ulke;
+
+            sehirler.SehirId = 2;
+            sehirler.SehirAd = "Üsküp";
+            sehirler.Nufus = 1600000;
+            sehirler.Ulke = "Makedonya";
+            ViewBag.z1 = sehirler.SehirId;
+            ViewBag.z2 = sehirler.SehirAd;
+            ViewBag.z3 = sehirler.Nufus;
+            ViewBag.z4 = sehirler.Ulke;
             return View();
         }
 
